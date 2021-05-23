@@ -1,10 +1,12 @@
-#/bin/sh
+#!/bin/bash
+<< COMMENTOUT
+  第一パラメータを元に環境変数を呼び分ける
+COMMENTOUT
 
-var1=あいうえお
-echo "var1:"$var1
-echo "パラメータ1:"$0
-echo "パラメータ2:"$1
+shell_root_path=`dirname {0}`
+env=$1
+echo "環境："$env
+source $shell_root_path/property/it.sh
 
-source `dirname {0}`/app_variable.sh
-
-echo "別シェルの変数:"$another1
+echo "URL:"
+echo $protocol://$ip:$port$base_path
