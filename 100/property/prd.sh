@@ -2,5 +2,5 @@
 
 export protocol="https"
 export ip="dummy/domain"
-export port="80"
-export base_path="/api/v1"
+export port="10080"
+export base_path="/api/v100"
