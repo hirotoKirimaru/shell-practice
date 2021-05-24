@@ -6,6 +6,9 @@ COMMENTOUT
 shell_root_path=`dirname {0}`
 env=$1
 
+# エラーが起きたらその時点で止める
+set -eu
+
 if [ -z "$env" ]; then
   echo "パラメータは必須です。"
   echo "例)"
