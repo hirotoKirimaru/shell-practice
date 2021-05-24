@@ -6,7 +6,7 @@ COMMENTOUT
 shell_root_path=`dirname {0}`
 env=$1
 
-# エラーが起きたらその時点で止める
+# エラーが起きたらその時点で止める（eはexit0以外が発生したら。uは使用していない変数を定義したら）
 set -eu
 
 if [ -z "$env" ]; then
