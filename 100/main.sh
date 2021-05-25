@@ -6,8 +6,11 @@ COMMENTOUT
 shell_root_path=`dirname {0}`
 env=$1
 
-# エラーが起きたらその時点で止める（eはexit0以外が発生したら。uは使用していない変数を定義したら）
-set -eu
+# 共通的なメソッドを呼び出す
+source $shell_root_path/common.sh
+
+setting
+echoTest
 
 if [ -z "$env" ]; then
   echo "パラメータは必須です。"
@@ -16,6 +19,7 @@ if [ -z "$env" ]; then
   exit 1
 fi
 
+# 共通的な変数を呼び出す
 echo "環境："$env
 source $shell_root_path/property/$env.sh
 
