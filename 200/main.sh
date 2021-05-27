@@ -51,7 +51,25 @@ echo -e "\e[43m
 
 echo 6
 
+# 　Code　	　Color　	　nomal　	bold / blink
+# 　　0	Black		
+# 　　1	Red		
+# 　　2	Green		
+# 　　3	Yellow		
+# 　　4	Blue		
+# 　　5	Magenta		
+# 　　6	Cyan		
+# 　　7	White
 
+echo -e "\e[30mBlack\e[m"
+echo -e "\e[31mRed\e[m"
+echo -e "\e[32mGreen\e[m"
+echo -e "\e[33mYellow\e[m"
+echo -e "\e[34mBlue\e[m"
+echo -e "\e[35mMagenta\e[m"
+echo -e "\e[36mCyan\e[m"
+echo -e "\e[37mWhite\e[m"
+echo -e "\e[37;1;42mWhite\e[m"
 
 
 
