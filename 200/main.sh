@@ -1,4 +1,17 @@
 #!/bin/bash
+<< COMMENTOUT
+  色付けとtry-catch-finallyを学ぶためのシェル
+COMMENTOUT
+
+set -eu
+
+trap errorMessage EXIT
+
+function errorMessage {
+    echo -e "$red_font_color
+*************処理に失敗しました*****************
+\e[m"
+}
 
 red_font_color="\e[31m"
 green_font_color="\e[32m"
@@ -20,8 +33,8 @@ echo -e "$green_font_color
 
 # exit 0
 
-trap 'echo -e "$red_font_color
-*************処理に失敗しました*****************
-\e[m"' EXIT
+# trap 'echo -e "$red_font_color
+# *************処理に失敗しました*****************
+# \e[m"' EXIT
 
-exit 1
+# exit 1
