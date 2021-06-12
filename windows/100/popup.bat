@@ -1,0 +1,1 @@
+echo msgbox "kakikukeko",vbCritical,"aiueo" > %TEMP%/msgboxtest.vbs & %TEMP%/msgboxtest.vbs
